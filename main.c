@@ -8,6 +8,7 @@ int contar_matriz(FILE *file){
     while(fscanf(file, "%d", &valor) == 1){
         cont_linha++;
     }
+    rewind(file);
     
     return (int)sqrt(cont_linha);
     
