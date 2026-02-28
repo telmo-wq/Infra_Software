@@ -20,7 +20,14 @@ int main(int argc, char *argv[])
         int num;
         FILE *file = fopen(argv[i], "r");
 
+        if (file == NULL){
+            printf("ERRO! Arquivo não encontrado ou inexistente\n");
+
+            return 0;
+        }
+
         int tamanho_matriz = contar_matriz(file);
+        if (tamanho_matriz )
         printf("%d\n", tamanho_matriz);
 
         int **matriz = (int **)malloc(tamanho_matriz * sizeof(int *));
