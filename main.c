@@ -9,8 +9,14 @@ int contar_matriz(FILE *file){
         cont_linha++;
     }
     rewind(file);
-    
-    return (int)sqrt(cont_linha);
+
+    if (sqrt(cont_linha) == (int)sqrt(cont_linha)){
+        return (int)sqrt(cont_linha);
+
+    }else{
+        return 0;
+
+    }
     
 }
 
@@ -27,7 +33,12 @@ int main(int argc, char *argv[])
         }
 
         int tamanho_matriz = contar_matriz(file);
-        if (tamanho_matriz )
+        
+        if (tamanho_matriz == 0){
+            printf("ERRO! Matriz nao quadrada\n");
+            return 0;
+        }
+
         printf("%d\n", tamanho_matriz);
 
         int **matriz = (int **)malloc(tamanho_matriz * sizeof(int *));
