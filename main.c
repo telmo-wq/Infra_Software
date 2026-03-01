@@ -1,24 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
-
-int contar_matriz(FILE *file){
-    int cont_linha = 0;
-    int valor;
-    while(fscanf(file, "%d", &valor) == 1){
-        cont_linha++;
-    }
-    rewind(file);
-
-    if (sqrt(cont_linha) == (int)sqrt(cont_linha)){
-        return (int)sqrt(cont_linha);
-
-    }else{
-        return 0;
-
-    }
-    
-}
+#include "biblioteca.h"
 
 int main(int argc, char *argv[])
 {
