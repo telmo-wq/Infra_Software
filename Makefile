@@ -1,11 +1,11 @@
-tensor: main.o
-	gcc main.o -o tensor -lm
+tensor: main.o biblioteca.o
+	gcc main.o biblioteca.o -o tensor -lm
 
 main.o: main.c
 	gcc -c main.c
 
-run: tensor
-	./tensor
+biblioteca.o: biblioteca.c biblioteca.h
+	gcc -c biblioteca.c
 
-clean:
-	rm -f * .o tensor
+clean: 
+	rm *.o tensor
