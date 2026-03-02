@@ -1,5 +1,5 @@
 # Implementaçã de Produto Tensorial
-## Aluno Telmo Melo Ferreira Calheiros
+
 
 Neste repositório estão contidos dois arquivos .c
 
