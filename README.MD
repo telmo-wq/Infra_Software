@@ -1,4 +1,4 @@
-# Implementaçã de Produto Tensorial
+# Implementação de Produto Tensorial
 
 
 Neste repositório estão contidos dois arquivos .c
